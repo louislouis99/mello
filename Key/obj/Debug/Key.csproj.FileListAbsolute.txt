@@ -1,0 +1,10 @@
+C:\Users\louis\source\repos\Mello\Key\bin\Debug\Key.exe.config
+C:\Users\louis\source\repos\Mello\Key\bin\Debug\Key.exe
+C:\Users\louis\source\repos\Mello\Key\bin\Debug\Key.pdb
+C:\Users\louis\source\repos\Mello\Key\obj\Debug\Key.csprojResolveAssemblyReference.cache
+C:\Users\louis\source\repos\Mello\Key\obj\Debug\Key.Properties.Resources.resources
+C:\Users\louis\source\repos\Mello\Key\obj\Debug\Key.csproj.GenerateResource.Cache
+C:\Users\louis\source\repos\Mello\Key\obj\Debug\Key.csproj.CoreCompileInputs.cache
+C:\Users\louis\source\repos\Mello\Key\obj\Debug\Key.exe
+C:\Users\louis\source\repos\Mello\Key\obj\Debug\Key.pdb
+C:\Users\louis\source\repos\Mello\Key\obj\Debug\Key.Key.resources

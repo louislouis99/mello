@@ -1,0 +1,7 @@
+C:\Users\louis\source\repos\Mello\MelloControl\bin\Debug\MelloControl.exe.config
+C:\Users\louis\source\repos\Mello\MelloControl\bin\Debug\MelloControl.exe
+C:\Users\louis\source\repos\Mello\MelloControl\bin\Debug\MelloControl.pdb
+C:\Users\louis\source\repos\Mello\MelloControl\obj\Debug\MelloControl.csprojResolveAssemblyReference.cache
+C:\Users\louis\source\repos\Mello\MelloControl\obj\Debug\MelloControl.csproj.CoreCompileInputs.cache
+C:\Users\louis\source\repos\Mello\MelloControl\obj\Debug\MelloControl.exe
+C:\Users\louis\source\repos\Mello\MelloControl\obj\Debug\MelloControl.pdb
