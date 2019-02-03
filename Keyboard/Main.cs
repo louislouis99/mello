@@ -1,14 +1,11 @@
-﻿using System;
+﻿using Keyboard.Models;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Keyboard.Models;
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Keyboard
 {
@@ -25,16 +22,17 @@ namespace Keyboard
             _samples = new List<Sample>();
             _instruments = new List<string>();
             GetInstruments(_path);
+            MakeButtons();
         }
 
         private void ClearDisplay()
         {
-            var count = Controls.Count-1;
+            var count = this.groupBoxKeys.Controls.Count - 1;
             for (int i = count; i > 0; i--)
             {
-                if (Controls[i].GetType() == typeof(Keys))
+                if (this.groupBoxKeys.Controls[i].GetType() == typeof(Keys))
                 {
-                    Controls.Remove(Controls[i]);
+                    this.groupBoxKeys.Controls.Remove(this.groupBoxKeys.Controls[i]);
                 }
             }
         }
@@ -43,7 +41,7 @@ namespace Keyboard
         {
             var x = 0;
             var y = 50;
-            var width = 35;
+            var width = 38;
             var height = 100;
             var space = 2;
 
@@ -87,22 +85,16 @@ namespace Keyboard
                         _current.Stop();
                     }
 
-                    if (_current == k)
-                    {
-                        _current.Stop();
-                        _current = null;
-                    }
-                    else
-                    {
-                        _current = k;
-                        _current.Play();
-                    }
+                    _current = k;
+                    _current.Play();
+
                 });
 
                 key.Location = location;
                 key.Size = size;
+                key.Tag = "key";
 
-                this.Controls.Add(key);
+                this.groupBoxKeys.Controls.Add(key);
             }
         }
 
@@ -115,16 +107,59 @@ namespace Keyboard
                 _instruments.Add(instrument);
 
             });
+        }
 
-            Instruments.DataSource = _instruments;
+        private void MakeButtons()
+        {
+            var size = new Size(100, 100);
+            var location = new Point(0, 0);
+            _instruments.ForEach(i =>
+            {
+                var button = new Button();
+                button.Text = i;
+                button.Click += LoadSamplesClick;
+                button.Top = 500;
+                button.Size = size;
+                button.Location = location;
+                button.BackColor = Color.White;
+                button.Tag = "instrument";
 
+                groupBoxInstrument.Controls.Add(button);
+
+                location.X += button.Width;
+            });
+        }
+
+        private void LoadSamplesClick(object sender, EventArgs e)
+        {
+            ClearButtonColor();
+
+            Button button = (Button)sender;
+            LoadSamples(button.Text);
+            ClearDisplay();
+            DisplaySamples();
+            button.BackColor = Color.LightSteelBlue;
+        }
+
+        private void ClearButtonColor()
+        {
+            foreach (Control control in groupBoxInstrument.Controls)
+            {
+                if (control.GetType() == typeof(Button))
+                {
+                    if (control.Tag.ToString() == "instrument")
+                    {                        
+                        control.BackColor = Color.White;
+                    }
+                }
+            }
         }
 
         private void LoadSamples(string instrument)
         {
             _samples.Clear();
 
-            Directory.GetFiles($"{_path}//{instrument}").ToList().ForEach(sound =>
+            Directory.GetFiles($"{_path}\\{instrument}").ToList().ForEach(sound =>
             {
                 _samples.Add(new Sample
                 {
@@ -133,11 +168,18 @@ namespace Keyboard
             });
         }
 
-        private void Instruments_SelectedIndexChanged(object sender, EventArgs e)
+        private void buttonStop_Click(object sender, EventArgs e)
         {
-            LoadSamples(Instruments.SelectedItem.ToString());
-            ClearDisplay();
-            DisplaySamples();
+            _current.Stop();
+        }
+
+        private void Main_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (_current != null)
+            {
+                _current.Stop();
+
+            }
         }
     }
 }

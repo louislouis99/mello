@@ -28,36 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Instruments = new System.Windows.Forms.ListBox();
+            this.groupBoxInstrument = new System.Windows.Forms.GroupBox();
+            this.groupBoxKeys = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
-            // Instruments
+            // groupBoxInstrument
             // 
-            this.Instruments.FormattingEnabled = true;
-            this.Instruments.ItemHeight = 16;
-            this.Instruments.Location = new System.Drawing.Point(23, 308);
-            this.Instruments.Name = "Instruments";
-            this.Instruments.Size = new System.Drawing.Size(388, 228);
-            this.Instruments.TabIndex = 0;
-            this.Instruments.SelectedIndexChanged += new System.EventHandler(this.Instruments_SelectedIndexChanged);
+            this.groupBoxInstrument.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.groupBoxInstrument.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBoxInstrument.Location = new System.Drawing.Point(0, 415);
+            this.groupBoxInstrument.Name = "groupBoxInstrument";
+            this.groupBoxInstrument.Size = new System.Drawing.Size(716, 138);
+            this.groupBoxInstrument.TabIndex = 0;
+            this.groupBoxInstrument.TabStop = false;
+            // 
+            // groupBoxKeys
+            // 
+            this.groupBoxKeys.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.groupBoxKeys.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBoxKeys.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxKeys.Name = "groupBoxKeys";
+            this.groupBoxKeys.Size = new System.Drawing.Size(716, 337);
+            this.groupBoxKeys.TabIndex = 0;
+            this.groupBoxKeys.TabStop = false;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1379, 553);
-            this.Controls.Add(this.Instruments);
+            this.BackColor = System.Drawing.Color.LightSlateGray;
+            this.ClientSize = new System.Drawing.Size(716, 553);
+            this.Controls.Add(this.groupBoxKeys);
+            this.Controls.Add(this.groupBoxInstrument);
             this.Name = "Main";
             this.Text = "Main";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Main_MouseClick);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox Instruments;
+        private System.Windows.Forms.GroupBox groupBoxInstrument;
+        private System.Windows.Forms.GroupBox groupBoxKeys;
     }
 }
 
