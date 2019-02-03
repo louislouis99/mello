@@ -16,18 +16,21 @@ namespace Keyboard
         private string _note;
         private string _path;
         private SoundPlayer _soundPlayer;
+        private Action<Keys> _func;
+        public bool Playing { get; set; }
 
-        public Keys(string note, string path, Color backcolor, Color forecolor)
+        public Keys(string note, string path, Color backcolor, Color forecolor, Action<Keys> func)
         {
             InitializeComponent();
 
             _note = note;
             _path = path;
             _soundPlayer = new SoundPlayer(_path);
+            _func = func;
 
             Init();
             this.buttonKey.Size = this.Size;
-            this.buttonKey.Text = _note;
+            this.buttonKey.Text = string.Empty;
             this.buttonKey.BackColor = backcolor;
             this.buttonKey.ForeColor = forecolor;
         }
@@ -46,7 +49,17 @@ namespace Keyboard
 
         private void buttonKey_Click(object sender, EventArgs e)
         {
-            _soundPlayer.Play();                        
+            _func(this);
+        }
+
+        public void Play()
+        {
+            _soundPlayer.Play();
+        }
+
+        public void Stop()
+        {
+            _soundPlayer.Stop();
         }
     }
 }

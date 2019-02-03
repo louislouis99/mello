@@ -28,7 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.Instruments = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
+            // 
+            // Instruments
+            // 
+            this.Instruments.FormattingEnabled = true;
+            this.Instruments.ItemHeight = 16;
+            this.Instruments.Location = new System.Drawing.Point(23, 308);
+            this.Instruments.Name = "Instruments";
+            this.Instruments.Size = new System.Drawing.Size(388, 228);
+            this.Instruments.TabIndex = 0;
+            this.Instruments.SelectedIndexChanged += new System.EventHandler(this.Instruments_SelectedIndexChanged);
             // 
             // Main
             // 
@@ -36,6 +47,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1379, 553);
+            this.Controls.Add(this.Instruments);
             this.Name = "Main";
             this.Text = "Main";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -44,6 +56,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox Instruments;
     }
 }
 

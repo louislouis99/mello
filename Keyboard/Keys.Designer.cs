@@ -33,6 +33,7 @@
             // 
             // buttonKey
             // 
+            this.buttonKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKey.Location = new System.Drawing.Point(0, 0);
             this.buttonKey.Name = "buttonKey";
             this.buttonKey.Size = new System.Drawing.Size(75, 23);
