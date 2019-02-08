@@ -36,9 +36,9 @@
             // 
             this.groupBoxInstrument.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBoxInstrument.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBoxInstrument.Location = new System.Drawing.Point(0, 415);
+            this.groupBoxInstrument.Location = new System.Drawing.Point(0, 158);
             this.groupBoxInstrument.Name = "groupBoxInstrument";
-            this.groupBoxInstrument.Size = new System.Drawing.Size(716, 138);
+            this.groupBoxInstrument.Size = new System.Drawing.Size(1924, 69);
             this.groupBoxInstrument.TabIndex = 0;
             this.groupBoxInstrument.TabStop = false;
             // 
@@ -48,7 +48,7 @@
             this.groupBoxKeys.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBoxKeys.Location = new System.Drawing.Point(0, 0);
             this.groupBoxKeys.Name = "groupBoxKeys";
-            this.groupBoxKeys.Size = new System.Drawing.Size(716, 337);
+            this.groupBoxKeys.Size = new System.Drawing.Size(1924, 116);
             this.groupBoxKeys.TabIndex = 0;
             this.groupBoxKeys.TabStop = false;
             // 
@@ -57,12 +57,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
-            this.ClientSize = new System.Drawing.Size(716, 553);
+            this.ClientSize = new System.Drawing.Size(1924, 227);
             this.Controls.Add(this.groupBoxKeys);
             this.Controls.Add(this.groupBoxInstrument);
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Main";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Main_MouseClick);
             this.ResumeLayout(false);
 

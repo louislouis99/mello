@@ -1,0 +1,11 @@
+C:\repos\Mello\Keyboard\bin\Release\Keyboard.exe.config
+C:\repos\Mello\Keyboard\bin\Release\Keyboard.exe
+C:\repos\Mello\Keyboard\bin\Release\Keyboard.pdb
+C:\repos\Mello\Keyboard\obj\Release\Keyboard.csprojResolveAssemblyReference.cache
+C:\repos\Mello\Keyboard\obj\Release\Keyboard.Keys.resources
+C:\repos\Mello\Keyboard\obj\Release\Keyboard.Main.resources
+C:\repos\Mello\Keyboard\obj\Release\Keyboard.Properties.Resources.resources
+C:\repos\Mello\Keyboard\obj\Release\Keyboard.csproj.GenerateResource.Cache
+C:\repos\Mello\Keyboard\obj\Release\Keyboard.csproj.CoreCompileInputs.cache
+C:\repos\Mello\Keyboard\obj\Release\Keyboard.exe
+C:\repos\Mello\Keyboard\obj\Release\Keyboard.pdb

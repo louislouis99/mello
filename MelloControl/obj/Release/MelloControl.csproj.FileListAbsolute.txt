@@ -1,0 +1,6 @@
+C:\repos\Mello\MelloControl\bin\Release\MelloControl.exe.config
+C:\repos\Mello\MelloControl\bin\Release\MelloControl.exe
+C:\repos\Mello\MelloControl\bin\Release\MelloControl.pdb
+C:\repos\Mello\MelloControl\obj\Release\MelloControl.csproj.CoreCompileInputs.cache
+C:\repos\Mello\MelloControl\obj\Release\MelloControl.exe
+C:\repos\Mello\MelloControl\obj\Release\MelloControl.pdb

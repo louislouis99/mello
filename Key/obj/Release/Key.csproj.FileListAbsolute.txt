@@ -1,0 +1,9 @@
+C:\repos\Mello\Key\bin\Release\Key.exe.config
+C:\repos\Mello\Key\bin\Release\Key.exe
+C:\repos\Mello\Key\bin\Release\Key.pdb
+C:\repos\Mello\Key\obj\Release\Key.Key.resources
+C:\repos\Mello\Key\obj\Release\Key.Properties.Resources.resources
+C:\repos\Mello\Key\obj\Release\Key.csproj.GenerateResource.Cache
+C:\repos\Mello\Key\obj\Release\Key.csproj.CoreCompileInputs.cache
+C:\repos\Mello\Key\obj\Release\Key.exe
+C:\repos\Mello\Key\obj\Release\Key.pdb

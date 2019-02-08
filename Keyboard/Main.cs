@@ -12,7 +12,7 @@ namespace Keyboard
     public partial class Main : Form
     {
         private List<Sample> _samples;
-        private string _path = @"C:\Users\louis\source\repos\Mello\Keyboard\Sounds\";
+        private string _path = @"C:\Sounds\";
         private Keys _current;
         private List<string> _instruments;
 
@@ -23,6 +23,7 @@ namespace Keyboard
             _instruments = new List<string>();
             GetInstruments(_path);
             MakeButtons();
+            this.Width = 1500;
         }
 
         private void ClearDisplay()
@@ -40,13 +41,14 @@ namespace Keyboard
         private void DisplaySamples()
         {
             var x = 0;
-            var y = 50;
+            var y = 0;
             var width = 38;
-            var height = 100;
+            var height = 50;
             var space = 2;
 
             // list of keys in the right order
             var sampleList = new SampleList();
+            this.groupBoxKeys.Controls.Clear();
 
             sampleList.OrderBy(c => c.Position).ToList().ForEach(p =>
             {
@@ -58,7 +60,7 @@ namespace Keyboard
                 {
                     AddSample(
                         sample,
-                        new Point(x += (width + space), y + 80 + space),
+                        new Point(x += (width + space), y + 30 + space),
                         new Size(width, height),
                         Color.White,
                         Color.Black);
@@ -82,10 +84,12 @@ namespace Keyboard
                 {
                     if (_current != null)
                     {
+                        _current.KeyColor = _current.DefaultColor;
                         _current.Stop();
                     }
-
+                    
                     _current = k;
+                    _current.KeyColor = Color.DarkRed;
                     _current.Play();
 
                 });
@@ -111,14 +115,13 @@ namespace Keyboard
 
         private void MakeButtons()
         {
-            var size = new Size(100, 100);
+            var size = new Size(100, 50);
             var location = new Point(0, 0);
             _instruments.ForEach(i =>
             {
                 var button = new Button();
                 button.Text = i;
                 button.Click += LoadSamplesClick;
-                button.Top = 500;
                 button.Size = size;
                 button.Location = location;
                 button.BackColor = Color.White;

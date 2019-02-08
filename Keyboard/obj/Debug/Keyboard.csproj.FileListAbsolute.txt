@@ -9,3 +9,14 @@ C:\Users\louis\source\repos\Mello\Keyboard\obj\Debug\Keyboard.pdb
 C:\Users\louis\source\repos\Mello\Keyboard\obj\Debug\Keyboard.csprojResolveAssemblyReference.cache
 C:\Users\louis\source\repos\Mello\Keyboard\obj\Debug\Keyboard.Main.resources
 C:\Users\louis\source\repos\Mello\Keyboard\obj\Debug\Keyboard.Keys.resources
+C:\repos\Mello\Keyboard\bin\Debug\Keyboard.exe.config
+C:\repos\Mello\Keyboard\bin\Debug\Keyboard.exe
+C:\repos\Mello\Keyboard\bin\Debug\Keyboard.pdb
+C:\repos\Mello\Keyboard\obj\Debug\Keyboard.csprojResolveAssemblyReference.cache
+C:\repos\Mello\Keyboard\obj\Debug\Keyboard.Keys.resources
+C:\repos\Mello\Keyboard\obj\Debug\Keyboard.Main.resources
+C:\repos\Mello\Keyboard\obj\Debug\Keyboard.Properties.Resources.resources
+C:\repos\Mello\Keyboard\obj\Debug\Keyboard.csproj.GenerateResource.Cache
+C:\repos\Mello\Keyboard\obj\Debug\Keyboard.csproj.CoreCompileInputs.cache
+C:\repos\Mello\Keyboard\obj\Debug\Keyboard.exe
+C:\repos\Mello\Keyboard\obj\Debug\Keyboard.pdb

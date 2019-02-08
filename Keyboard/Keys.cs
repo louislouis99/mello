@@ -31,8 +31,22 @@ namespace Keyboard
             Init();
             this.buttonKey.Size = this.Size;
             this.buttonKey.Text = string.Empty;
-            this.buttonKey.BackColor = backcolor;
-            this.buttonKey.ForeColor = forecolor;
+            this.KeyColor = backcolor;
+            DefaultColor = backcolor;
+        }
+
+        public Color DefaultColor;
+
+        public Color KeyColor
+        {
+            get
+            {
+                return this.buttonKey.BackColor;
+            }
+            set
+            {
+                this.buttonKey.BackColor = value;
+            }
         }
 
         private void Init()
