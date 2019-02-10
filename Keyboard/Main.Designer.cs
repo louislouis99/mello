@@ -30,6 +30,7 @@
         {
             this.groupBoxInstrument = new System.Windows.Forms.GroupBox();
             this.groupBoxKeys = new System.Windows.Forms.GroupBox();
+            this.progressBarDuration = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // groupBoxInstrument
@@ -52,12 +53,22 @@
             this.groupBoxKeys.TabIndex = 0;
             this.groupBoxKeys.TabStop = false;
             // 
+            // progressBarDuration
+            // 
+            this.progressBarDuration.ForeColor = System.Drawing.Color.Black;
+            this.progressBarDuration.Location = new System.Drawing.Point(12, 116);
+            this.progressBarDuration.Maximum = 7000;
+            this.progressBarDuration.Name = "progressBarDuration";
+            this.progressBarDuration.Size = new System.Drawing.Size(494, 10);
+            this.progressBarDuration.TabIndex = 2;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(1924, 227);
+            this.Controls.Add(this.progressBarDuration);
             this.Controls.Add(this.groupBoxKeys);
             this.Controls.Add(this.groupBoxInstrument);
             this.Name = "Main";
@@ -72,6 +83,7 @@
 
         private System.Windows.Forms.GroupBox groupBoxInstrument;
         private System.Windows.Forms.GroupBox groupBoxKeys;
+        private System.Windows.Forms.ProgressBar progressBarDuration;
     }
 }
 

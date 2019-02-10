@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonKey = new System.Windows.Forms.Button();
+            this.timerDuration = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // buttonKey
@@ -42,6 +44,10 @@
             this.buttonKey.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.buttonKey.UseVisualStyleBackColor = true;
             this.buttonKey.Click += new System.EventHandler(this.buttonKey_Click);
+            // 
+            // timerDuration
+            // 
+            this.timerDuration.Tick += new System.EventHandler(this.timerDuration_Tick);
             // 
             // Keys
             // 
@@ -57,5 +63,6 @@
         #endregion
 
         private System.Windows.Forms.Button buttonKey;
+        private System.Windows.Forms.Timer timerDuration;
     }
 }

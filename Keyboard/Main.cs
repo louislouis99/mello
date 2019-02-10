@@ -24,6 +24,8 @@ namespace Keyboard
             GetInstruments(_path);
             MakeButtons();
             this.Width = 1500;
+            progressBarDuration.Width = this.Width;
+            progressBarDuration.Left = this.Left;
         }
 
         private void ClearDisplay()
@@ -92,7 +94,20 @@ namespace Keyboard
                     _current.KeyColor = Color.DarkRed;
                     _current.Play();
 
-                });
+                },
+                    d =>
+                    {
+                        if (d.Counter > progressBarDuration.Maximum - 100)
+                        {
+                            progressBarDuration.Value = 0;
+                            _current.Stop();
+                        }
+                        else
+                        {
+                            progressBarDuration.Value = d.Counter;
+                        }                        
+                    }
+                );
 
                 key.Location = location;
                 key.Size = size;

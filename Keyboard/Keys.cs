@@ -17,9 +17,11 @@ namespace Keyboard
         private string _path;
         private SoundPlayer _soundPlayer;
         private Action<Keys> _func;
+        private Action<Keys> _duration;
         public bool Playing { get; set; }
+        public int Counter { get; private set; }
 
-        public Keys(string note, string path, Color backcolor, Color forecolor, Action<Keys> func)
+        public Keys(string note, string path, Color backcolor, Color forecolor, Action<Keys> func, Action<Keys> duration)
         {
             InitializeComponent();
 
@@ -27,12 +29,14 @@ namespace Keyboard
             _path = path;
             _soundPlayer = new SoundPlayer(_path);
             _func = func;
+            _duration = duration;
 
             Init();
             this.buttonKey.Size = this.Size;
             this.buttonKey.Text = string.Empty;
             this.KeyColor = backcolor;
             DefaultColor = backcolor;
+            timerDuration.Stop();
         }
 
         public Color DefaultColor;
@@ -68,12 +72,22 @@ namespace Keyboard
 
         public void Play()
         {
+            Counter = 0;
             _soundPlayer.Play();
+            timerDuration.Start();
         }
 
         public void Stop()
         {
             _soundPlayer.Stop();
+            timerDuration.Stop();
+
+        }
+
+        private void timerDuration_Tick(object sender, EventArgs e)
+        {
+            Counter += timerDuration.Interval;
+            _duration(this);
         }
     }
 }
